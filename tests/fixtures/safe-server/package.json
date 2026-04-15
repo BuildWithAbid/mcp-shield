@@ -1,0 +1,13 @@
+{
+  "name": "@test/safe-mcp-server",
+  "version": "1.0.0",
+  "description": "A well-configured MCP server for testing",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/safe-mcp-server"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "mcp-shield",
+  "version": "1.0.0",
+  "description": "Security scanner for MCP servers. Find vulnerabilities before your AI agent does.",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-shield": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-security",
+    "mcp-scanner",
+    "model-context-protocol",
+    "security-scanner",
+    "vulnerability-scanner",
+    "prompt-injection",
+    "supply-chain-security",
+    "secrets-detection",
+    "ai-security",
+    "llm-security",
+    "claude",
+    "mcp-server",
+    "audit",
+    "static-analysis"
+  ],
+  "author": "BuildWithAbid",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildWithAbid/mcp-shield.git"
+  },
+  "homepage": "https://github.com/BuildWithAbid/mcp-shield#readme",
+  "bugs": {
+    "url": "https://github.com/BuildWithAbid/mcp-shield/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "glob": "^11.0.1",
+    "levenary": "^1.1.1",
+    "typescript-parsec": "^0.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/"
+  ]
+}
