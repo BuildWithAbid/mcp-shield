@@ -19,7 +19,7 @@ Find vulnerabilities, prompt injection, secrets leaks, and supply chain attacks 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6.svg)](https://www.typescriptlang.org/)
-[![npm](https://img.shields.io/npm/v/mcp-shield.svg)](https://www.npmjs.com/package/mcp-shield)
+[![npm](https://img.shields.io/npm/v/@buildwithabid/mcp-shield.svg)](https://www.npmjs.com/package/@buildwithabid/mcp-shield)
 
 [Quick Start](#quick-start) &bull; [Security Checks](#7-security-checks) &bull; [MCP Server Mode](#mcp-server-mode) &bull; [Documentation](#documentation) &bull; [Contributing](#contributing)
 
@@ -46,10 +46,10 @@ MCP servers are the new attack surface for AI applications. Recent research has 
 
 ```bash
 # Run directly with npx (no install needed)
-npx mcp-shield scan <target>
+npx @buildwithabid/mcp-shield scan <target>
 
 # Or install globally
-npm install -g mcp-shield
+npm install -g @buildwithabid/mcp-shield
 ```
 
 ### Scan an MCP Server
@@ -177,10 +177,10 @@ mcp-shield also runs as an MCP server, so AI assistants can scan other MCP serve
 
 ```bash
 # Start the MCP server
-npx mcp-shield serve
+npx @buildwithabid/mcp-shield serve
 
 # Add to Claude Code
-claude mcp add mcp-shield -- npx mcp-shield serve
+claude mcp add mcp-shield -- npx @buildwithabid/mcp-shield serve
 ```
 
 ### Available MCP Tools
@@ -279,7 +279,7 @@ All 7 scanners run concurrently using `Promise.allSettled`, sharing a single fil
 
 ```bash
 # Fail the build if the MCP server has security issues
-npx mcp-shield scan ./my-mcp-server --format json
+npx @buildwithabid/mcp-shield scan ./my-mcp-server --format json
 # Exit code 1 if score < 70
 ```
 
@@ -287,21 +287,21 @@ npx mcp-shield scan ./my-mcp-server --format json
 
 ```bash
 # Check an MCP server package before installing it
-npx mcp-shield scan @unknown/mcp-server-database
+npx @buildwithabid/mcp-shield scan @unknown/mcp-server-database
 ```
 
 ### Security Audit
 
 ```bash
 # Generate a markdown report for a security review
-npx mcp-shield scan @company/internal-mcp-server --format markdown --output audit-report.md
+npx @buildwithabid/mcp-shield scan @company/internal-mcp-server --format markdown --output audit-report.md
 ```
 
 ### AI-Assisted Scanning
 
 ```bash
 # Let Claude scan MCP servers from within a conversation
-claude mcp add mcp-shield -- npx mcp-shield serve
+claude mcp add mcp-shield -- npx @buildwithabid/mcp-shield serve
 # Then ask: "Scan @modelcontextprotocol/server-filesystem for security issues"
 ```
 
