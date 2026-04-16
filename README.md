@@ -15,6 +15,7 @@
 
 Find vulnerabilities, prompt injection, secrets leaks, and supply chain attacks in MCP servers — before your AI agent does.
 
+[![CI](https://github.com/BuildWithAbid/mcp-shield/actions/workflows/ci.yml/badge.svg)](https://github.com/BuildWithAbid/mcp-shield/actions/workflows/ci.yml)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6.svg)](https://www.typescriptlang.org/)
