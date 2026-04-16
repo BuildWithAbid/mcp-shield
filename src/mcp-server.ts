@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -6,12 +8,14 @@ import { runScan } from "./scanner/index.js";
 import { report } from "./reporter/index.js";
 import type { ScanConfig, ScanResult, ReportFormat } from "./types.js";
 
+const PKG_VERSION: string = (JSON.parse(readFileSync(join(__dirname, "..", "package.json"), "utf-8")) as { version: string }).version;
+
 let lastResult: ScanResult | null = null;
 
 export async function startMcpServer(): Promise<void> {
   const server = new McpServer({
     name: "mcp-shield",
-    version: "1.0.0",
+    version: PKG_VERSION,
   });
 
   server.tool(

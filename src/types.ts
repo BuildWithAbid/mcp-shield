@@ -80,7 +80,7 @@ export interface SeverityCounts {
 }
 
 export interface ScannerError {
-  scanner: ScannerName;
+  scanner: string;
   message: string;
 }
 

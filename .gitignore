@@ -7,5 +7,7 @@ dist/
 *.log
 .DS_Store
 coverage/
+*.tgz
+.npmrc
 .vscode/
 .idea/

@@ -63,7 +63,7 @@ export async function runScan(config: ScanConfig): Promise<ScanResult> {
         errors.push({ scanner: result.value.name, message: result.value.error! });
       }
     } else {
-      errors.push({ scanner: "dependency-audit" as const, message: String(result.reason) });
+      errors.push({ scanner: "unknown", message: String(result.reason) });
     }
   }
 

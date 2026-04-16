@@ -23,7 +23,7 @@ export function formatTerminal(result: ScanResult): string {
 
   // Header
   lines.push("");
-  lines.push(`${BOLD}\u{1F6E1}\u{FE0F}  mcp-shield v1.0.0 \u2014 MCP Security Scanner${RESET}`);
+  lines.push(`${BOLD}\u{1F6E1}\u{FE0F}  mcp-shield \u2014 MCP Security Scanner${RESET}`);
   lines.push("");
   lines.push(`${BOLD}Scanning:${RESET} ${result.target}${result.version ? ` v${result.version}` : ""}`);
   lines.push("\u2501".repeat(50));
